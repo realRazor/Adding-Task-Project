@@ -5,9 +5,121 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 250vh 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sun-wrapper {
+  right: -50vh;
+  width: 100vh;
+  padding: 20px;
+  height: 0;
+}
+.sun {
+  display: flex;
+  justify-content: center; /* center items horizontally, in this case /
+  align-items: center; / center items vertically, in this case */
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  right: 100px;
+  background: orange;
+  box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+  inset 0 0 80px yellow;
+  z-index: -99;
+}
+.container {
+  
+  max-width: 66vh;
+  margin: 1px auto;
+  margin-top: 200px;
+  min-height: 300px;  
+  padding: 20px;
+  border-radius: 50px;
+  color: white;
+  font-size: 17px;
+  font-family: monospace;
+  align-items: center;
+  
+}
+.form-control{
+  margin: 30px 0;
+}
+.form-control input{
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 18px;
+  border-radius: 30px;
+
+}
+.form-control-check{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  
+}
+#remainder{
+  font-size: 25px;
+  transform: translateX(20vh);
+}
+.btn {
+  
+  border-radius: 30px;
+  margin: 5px;  
+  text-decoration: none;
+  font-family: monospace
+  
+}
+.btn:hover {
+  background-color:#d1323231;
+  color: green;
+  transform: scale(1.01);
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn:active {
+  transform: scale(0.98);
+  
+}
+.btn-block {
+  font-size: 30px;
+  width: 100%;
+  height: 50px;
+  
+}
+
+
+.task{
+  background-color: #d1323231;
+  margin: 35px;
+  padding: 5px 25px;
+  cursor: pointer;
+  align-items: center;
+  
+}
+.task-reminder{
+  border-left: 5px solid green
+}
+.task-wrapper{
+  margin-top:80px;
+}
+.btn-delete{
+  color: green;
+}
+.name-section{
+  display:flex;
+  justify-content: space-between;
+}
+.typeTask{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
 }
