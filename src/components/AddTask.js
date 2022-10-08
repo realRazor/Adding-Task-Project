@@ -5,6 +5,7 @@ export default function AddTask({onSubmitTask}) {
     const [name,setName] = useState('');
     const [day,setDay] = useState('');
     const [hour,setHour] = useState('');
+    const [description,setDescription] = useState('');
     const [reminder,setReminder] = useState(false);
 
 
@@ -29,6 +30,15 @@ export default function AddTask({onSubmitTask}) {
                 placeholder='Add Task'
                 value={name}
                 onChange={(e)=> setName(e.target.value)}
+            />
+        </div>
+        <div className='form-control'>
+            <label className='typeTask'>Description</label>
+            <input 
+                type="text-area"
+                placeholder='Description'
+                value={description}
+                onChange={(e)=> setDescription(e.target.value)}
             />
         </div>
         <div className='form-control'>
