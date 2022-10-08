@@ -58,7 +58,7 @@ export default function App() {
       setTasks(updatedTasks);
     })
     .catch((error)=> console.log("update task",error));
-};
+  };
 
   const deleteTask = (id) => {
     fetch(`http://localhost:5000/tasks/${id}`,{
