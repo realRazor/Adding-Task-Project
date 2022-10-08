@@ -56,16 +56,18 @@ body {
   margin: 5px;
   padding: 3px 7px;
   font-size: 18px;
-  border-radius: 30px;
-
+  border-radius: 20px;
+  background-color: #2a466fe8;
 }
 .form-control-check{
+  
   display: flex;
   align-items: center;
   justify-content:space-between;
   
 }
 #remainder{
+  
   font-size: 25px;
   transform: translateX(20vh);
 }
@@ -104,6 +106,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  border-radius: 30px;
   
 }
 .task-reminder{
@@ -124,6 +127,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 25px;
+  
 }
 .openButton{
   margin: auto;
@@ -144,4 +148,21 @@ body {
 .day-time-display{
   display: flex;
   gap: 20;
+  justify-content: space-between;
+  align-items: center;
+}
+.hour{
+  transform: translateX(10px);
+}
+.icons{
+  padding: 5px 35px;
+}
+#enter{
+  transform: translateX(30px);
+}
+#edit{
+  transform: translateX(15px);
+}
+.aboutPart{
+  
 }

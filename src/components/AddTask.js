@@ -8,7 +8,6 @@ export default function AddTask({onSubmitTask}) {
     const [description,setDescription] = useState('');
     const [reminder,setReminder] = useState(false);
 
-
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -16,8 +15,8 @@ export default function AddTask({onSubmitTask}) {
             alert('Please fill the all inputs')
             return;
         }
-        //console.log("test", name, day, hour)
-        onSubmitTask({name,day,hour,reminder});
+        
+        onSubmitTask({name,day,description,hour,reminder});
     };
 
   return (
@@ -25,7 +24,7 @@ export default function AddTask({onSubmitTask}) {
         
         <div className='form-control'>
             <label className='typeTask'>Task</label>
-            <input 
+            <input style={{color: "rgb(255, 136, 0)"}}
                 type="text"
                 placeholder='Add Task'
                 value={name}
@@ -34,7 +33,9 @@ export default function AddTask({onSubmitTask}) {
         </div>
         <div className='form-control'>
             <label className='typeTask'>Description</label>
-            <input 
+            <input style={{
+                color: "rgb(255, 136, 0)"
+            }}
                 type="text-area"
                 placeholder='Description'
                 value={description}
@@ -43,7 +44,7 @@ export default function AddTask({onSubmitTask}) {
         </div>
         <div className='form-control'>
             <label className='typeTask'>Day</label>
-            <input 
+            <input style={{color: "rgb(255, 136, 0)"}}
                 type="date"
                 placeholder='Day'
                 value={day}
@@ -52,7 +53,7 @@ export default function AddTask({onSubmitTask}) {
         </div>
         <div className='form-control'>
             <label className='typeTask'>Hour</label>
-            <input 
+            <input style={{color: "rgb(255, 136, 0)"}}
                 type="time"
                 placeholder='Time'
                 value={hour}
@@ -61,7 +62,7 @@ export default function AddTask({onSubmitTask}) {
         </div>
         <div className='form-control form-control-check'>
             <label id='remainder'>Reminder</label>
-            <input 
+            <input style={{color: "rgb(255, 136, 0)"}}
                 type="checkbox"
                 checked={reminder}
                 value={reminder}

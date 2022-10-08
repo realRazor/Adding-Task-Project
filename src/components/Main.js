@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState} from 'react'
 import AddTask from './AddTask'
-import { useState } from 'react';
 import Sun from './Sun'
 import Task from './Task';
 import ToggleButton from './ToggleButton';
-import {Link} from 'react-router-dom'
+
 
 export default function Main() {
   const [tasks,setTasks] = useState([]);
@@ -76,8 +75,7 @@ export default function Main() {
     setShowForm(!showForm)
   }
   const updateTask = (task) => {
-    // console.log("update task", task);
-
+    
     return new Promise((resole, reject) => {
       fetch(`http://localhost:5000/tasks/${task.id}`, {
         method: "PUT",
@@ -112,7 +110,7 @@ export default function Main() {
           <div className='tasks-wrapper'>
             {tasks.map((task)=>{
               return(
-                <Link />,
+                
                 <Task                
                   deleteTask = {deleteTask}
                   updateTask = {updateTask}

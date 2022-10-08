@@ -62,11 +62,11 @@ export default function Task({ task, toggleReminder, deleteTask, updateTask }) {
                     onKeyDown={onPressEnter}
                     />
                 ) : (
-                    <p>{hour}</p>
+                    <p className="hour">{hour}</p>
                 )}
             </div>
         </div>
-        <div>
+        <div className="icons">
             <Icon
             onClick={() => deleteTask(id)}
             icon="ep:circle-close"
@@ -74,17 +74,21 @@ export default function Task({ task, toggleReminder, deleteTask, updateTask }) {
             width="40"
             height="40"
             />
-            <Icon
+            <Icon id="edit"
             onClick={() => setIsUpdate(!isUpdate)}
             icon="akar-icons:edit"
             color="orange"
             width="40"
             height="40"
             />
-            <Link 
-            Icon 
-            
+            <Link to={`task/${id}`}>
+            <Icon id="enter"
+            icon="icon-park-solid:database-enter"
+            color="green"
+            width="40"
             />
+            </Link>
+            
         </div>
     </div>
   );
